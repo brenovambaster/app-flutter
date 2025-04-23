@@ -8,6 +8,19 @@
 Um aplicativo móvel em desenvolvimento com Flutter que reúne diversas ferramentas úteis para o dia a
 dia, como contador, lembretes, gerenciamento de manutenção veicular e calculadora de combustível.
 
+<!-- TOC -->
+
+* [FlutterUtils - Aplicativo de Utilidades Cotidianas](#flutterutils---aplicativo-de-utilidades-cotidianas)
+    * [Sobre o Projeto](#sobre-o-projeto)
+    * [Funcionalidades Planejadas](#funcionalidades-planejadas)
+    * [Tecnologias Utilizadas](#tecnologias-utilizadas)
+    * [Pré-requisitos](#pré-requisitos)
+    * [⬇️ Instalação](#-instalação)
+    * [▶️ Como Rodar](#-como-rodar)
+        * [Android / iOS](#android--ios)
+
+<!-- TOC -->
+
 ## Sobre o Projeto
 
 FlutterUtils está sendo desenvolvido como um projeto de estudo para implementar múltiplas
