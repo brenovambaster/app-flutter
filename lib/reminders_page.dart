@@ -29,6 +29,7 @@ class _RemindersPageState extends State<RemindersPage> {
       context: context,
       builder:
           (_) => AlertDialog(
+            insetPadding: EdgeInsets.symmetric(vertical: 40, horizontal: 20),
             title: const Text('Novo lembrete'),
             content: TextField(
               controller: controller,
@@ -77,15 +78,15 @@ class _RemindersPageState extends State<RemindersPage> {
         children: [
           FloatingActionButton(
             onPressed: _showAddReminderDialog,
-            child: const Icon(Icons.add),
             tooltip: 'Adicionar lembrete',
+            child: const Icon(Icons.add),
           ),
           const SizedBox(height: 16),
           FloatingActionButton(
             backgroundColor: Colors.red,
             onPressed: _clearReminders,
-            child: const Icon(Icons.clear_all),
             tooltip: 'Remover todos',
+            child: const Icon(Icons.clear_all),
           ),
         ],
       ),
