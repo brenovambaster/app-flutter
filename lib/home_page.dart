@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'reminders_page.dart';
+import 'pages/reminders_page.dart';
 import 'pages/fuel_page.dart';
 import 'pages/counter_page.dart';
 
@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
 
   final List<Widget> _pages = [
     const CounterPage(title: 'Contador'),
-    const RemindersPage(),
+    const RemindersPage(title: 'Lembretes'),
     const FuelPage(title: "Combustível"),
     const Center(child: Text('Revisões')),
     const Center(child: Text('Configurações')),
