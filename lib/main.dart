@@ -1,9 +1,19 @@
+import 'package:app1/controllers/counter_controller.dart';
+import 'package:app1/controllers/fuel_controller.dart';
 import 'package:app1/home_page.dart';
 import 'package:flutter/material.dart';
-import 'counter_page.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => FuelController()),
+        ChangeNotifierProvider(create: (_) => CounterController()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -16,6 +26,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
+        useMaterial3: true,
       ),
       home: const HomePage(),
     );
