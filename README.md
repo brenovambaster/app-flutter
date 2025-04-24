@@ -138,10 +138,11 @@ E-mail: brenovambaster5@gmail.com
 
 ## Screenshots
 
-<img height="1200" src="flutter_01.png" title="Contador" width="540"/>
-
-<img height="1200" src="flutter_02.png" title="Lembretes" width="540"/>
-
-<img height="1200" src="flutter_03.png" title="Lembretes" width="540"/>
-
-<img height="1200" src="flutter_04.png" title="Menu" width="540"/>
+<div>
+  <img height="600" src="flutter_04.png" title="Menu" width="270" style="margin-right: 10px;"/>
+  <img height="600" src="flutter_01.png" title="Contador" width="270"/>
+</div>
+<div>
+  <img height="600" src="flutter_02.png" title="Lembretes" width="270" style="margin-right: 10px;"/>
+  <img height="600" src="flutter_03.png" title="Lembretes" width="270"/>
+</div>
