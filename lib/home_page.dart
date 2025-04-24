@@ -1,3 +1,6 @@
+import 'package:provider/provider.dart';
+import 'controllers/fuel_controller.dart';
+import 'package:app1/pages/fuel_page.dart';
 import 'package:flutter/material.dart';
 import 'counter_page.dart';
 import 'reminders_page.dart';
@@ -12,12 +15,15 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
-  final List<Widget> _pages = const [
-    CounterPage(title: 'Contador'),
-    RemindersPage(),
-    Center(child: Text('Combustível')),
-    Center(child: Text('Revisões')),
-    Center(child: Text('Configurações')),
+  final List<Widget> _pages = [
+    const CounterPage(title: 'Contador'),
+    const RemindersPage(),
+    ChangeNotifierProvider(
+      create: (_) => FuelController(),
+      child: const FuelPage(),
+    ),
+    const Center(child: Text('Revisões')),
+    const Center(child: Text('Configurações')),
   ];
 
   void _onItemTapped(int index) {
