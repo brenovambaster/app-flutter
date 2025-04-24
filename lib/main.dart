@@ -1,5 +1,6 @@
 import 'package:app1/controllers/counter_controller.dart';
 import 'package:app1/controllers/fuel_controller.dart';
+import 'package:app1/controllers/reminder_controller.dart';
 import 'package:app1/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -10,6 +11,7 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (_) => FuelController()),
         ChangeNotifierProvider(create: (_) => CounterController()),
+        ChangeNotifierProvider(create: (_) => ReminderController()),
       ],
       child: const MyApp(),
     ),

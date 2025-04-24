@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../models/fuel_result.dart';
+import '../models/fuel_result_model.dart';
 
 class FuelController extends ChangeNotifier {
   final alcoholController = TextEditingController();

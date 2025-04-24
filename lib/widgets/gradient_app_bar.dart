@@ -11,8 +11,9 @@ class GradientAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Text(
         title,
-        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+        style: const TextStyle(fontSize: 24, fontFamily: 'RobotoMono'),
       ),
+
       flexibleSpace: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
@@ -20,6 +21,17 @@ class GradientAppBar extends StatelessWidget implements PreferredSizeWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(20),
+            bottomRight: Radius.circular(20),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black12,
+              offset: Offset(0, 2),
+              blurRadius: 6.0,
+            ),
+          ],
         ),
       ),
       elevation: 0,
