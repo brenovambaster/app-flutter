@@ -139,10 +139,10 @@ E-mail: brenovambaster5@gmail.com
 ## Screenshots
 
 <div>
-  <img height="600" src="flutter_04.png" title="Menu" width="270" style="margin-right: 10px; border-radius: 8px;"/>
-  <img height="600" src="flutter_01.png" title="Contador" width="270" style="border-radius: 8px;"/>
+  <img height="600" src="assets/images/flutter_04.png" title="Menu" width="270" style="margin-right: 10px; border-radius: 8px;"/>
+  <img height="600" src="assets/images/flutter_01.png" title="Contador" width="270" style="border-radius: 8px;"/>
 </div>
 <div>
-  <img height="600" src="flutter_02.png" title="Lembretes" width="270" style="margin-right: 10px; border-radius: 8px;"/>
-  <img height="600" src="flutter_03.png" title="Lembretes" width="270" style="border-radius: 8px;"/>
+  <img height="600" src="assets/images/flutter_02.png" title="Lembretes" width="270" style="margin-right: 10px; border-radius: 8px;"/>
+  <img height="600" src="assets/images/flutter_03.png" title="Lembretes" width="270" style="border-radius: 8px;"/>
 </div>
