@@ -32,7 +32,7 @@ comandos a serem executados, etc. -->
 - [ ] Eu comentei meu código, principalmente em áreas difíceis de entender
 - [ ] Eu adicionei testes que comprovam que minha correção é eficaz ou que minha funcionalidade
   funciona
-- [ ] Novas e existentes dependências foram incluídas no arquivo `package.json`
+- [ ] Novas e existentes dependências foram incluídas no arquivo `pubspec.yaml`
 - [ ] Minhas alterações não geram novos avisos ou erros
 - [ ] Todas as funcionalidades existentes foram testadas e aprovadas
 
