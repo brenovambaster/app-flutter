@@ -9,19 +9,20 @@ Um aplicativo móvel em desenvolvimento com Flutter que reúne diversas ferramen
 dia, como contador, lembretes, gerenciamento de manutenção veicular e calculadora de combustível.
 
 <!-- TOC -->
-
 * [FlutterUtils - Aplicativo de Utilidades Cotidianas](#flutterutils---aplicativo-de-utilidades-cotidianas)
-    * [Sobre o Projeto](#sobre-o-projeto)
-    * [Funcionalidades Planejadas](#funcionalidades-planejadas)
-    * [Tecnologias Utilizadas](#tecnologias-utilizadas)
-    * [Pré-requisitos](#pré-requisitos)
-    * [⬇️ Instalação](#-instalação)
-    * [▶️ Como Rodar](#-como-rodar)
-        * [Android / iOS](#android--ios)
-
+  * [🔍 Sobre o Projeto](#-sobre-o-projeto)
+  * [🚀 Funcionalidades Planejadas](#-funcionalidades-planejadas)
+  * [🛠️ Tecnologias Utilizadas](#-tecnologias-utilizadas)
+  * [📋 Pré-requisitos](#-pré-requisitos)
+  * [⬇️ Instalação](#-instalação)
+  * [▶️ Como Rodar](#-como-rodar)
+    * [Android / iOS](#android--ios)
+  * [📄 Licença](#-licença)
+  * [🤝 Contribuição](#-contribuição)
+  * [📞 Contato](#-contato)
 <!-- TOC -->
 
-## Sobre o Projeto
+## 🔍 Sobre o Projeto
 
 FlutterUtils está sendo desenvolvido como um projeto de estudo para implementar múltiplas
 funcionalidades comuns em aplicativos móveis utilizando o framework Flutter. Este repositório
@@ -31,7 +32,7 @@ O objetivo é construir progressivamente um conjunto de ferramentas úteis em um
 explorando diferentes conceitos do Flutter como gerenciamento de estado, persistência de dados e
 design de interfaces responsivas.
 
-## Funcionalidades Planejadas
+## 🚀 Funcionalidades Planejadas
 
 Este projeto está em desenvolvimento ativo. Abaixo estão as funcionalidades que estão sendo
 implementadas:
@@ -47,7 +48,7 @@ implementadas:
 - [ ] **Armazenamento Local**: Persistência de dados para guardar informações mesmo quando o
   aplicativo é fechado.
 
-## Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
 * **Linguagem de Programação**: Dart 3.7.2
 * **Framework**: Flutter 3.29.2
@@ -56,7 +57,7 @@ implementadas:
 * **Notificações**: Flutter Local Notifications (planejado)
 * **UI/UX**: Material Design 3
 
-## Pré-requisitos
+## 📋 Pré-requisitos
 
 Para executar e desenvolver este projeto, você precisará:
 
@@ -111,3 +112,25 @@ Caso queira gerar um APK de release:
 flutter build apk --release
 ```
 
+## 📄 Licença
+
+Este projeto está sob a licença [MIT](https://opensource.org/licenses/MIT) – consulte o
+arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 🤝 Contribuição
+
+1. Faça um _fork_ deste repositório
+2. Crie sua branch de feature (`git checkout -b feature/nova-funcionalidade`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
+4. _Push_ para a branch (`git push origin feature/nova-funcionalidade`)
+5. Abra um _Pull Request_ e aguarde revisão
+
+---
+
+## 📞 Contato
+
+Breno Vambáster
+
+GitHub: https://github.com/brenovambaster
+
+E-mail: brenovambaster5@gmail.com
