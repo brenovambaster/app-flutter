@@ -1,9 +1,8 @@
-import 'package:provider/provider.dart';
-import 'controllers/fuel_controller.dart';
-import 'package:app1/pages/fuel_page.dart';
 import 'package:flutter/material.dart';
-import 'counter_page.dart';
+
 import 'reminders_page.dart';
+import 'pages/fuel_page.dart';
+import 'pages/counter_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -18,10 +17,7 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _pages = [
     const CounterPage(title: 'Contador'),
     const RemindersPage(),
-    ChangeNotifierProvider(
-      create: (_) => FuelController(),
-      child: const FuelPage(),
-    ),
+    const FuelPage(title: "Combustível"),
     const Center(child: Text('Revisões')),
     const Center(child: Text('Configurações')),
   ];
@@ -36,7 +32,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Caixa de ferramentas')),
+      appBar: AppBar(),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,

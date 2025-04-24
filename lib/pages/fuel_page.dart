@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import '../controllers/fuel_controller.dart';
 import 'package:provider/provider.dart';
+import '../widgets/gradient_app_bar.dart';
 
 class FuelPage extends StatelessWidget {
-  const FuelPage({super.key});
+  final String title;
+
+  const FuelPage({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
     final controller = Provider.of<FuelController>(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Álcool vs Gasolina"),
-        backgroundColor: Theme.of(context).primaryColorLight,
-      ),
+      appBar: GradientAppBar(title: title),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
