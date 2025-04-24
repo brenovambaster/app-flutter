@@ -1,20 +1,40 @@
 import 'package:flutter/material.dart';
 import '../models/reminder_model.dart';
-import 'package:intl/intl.dart';
+
 
 class ReminderTile extends StatelessWidget {
   final Reminder reminder;
+  final VoidCallback onEdit;
+  final VoidCallback onDelete;
 
-  const ReminderTile({super.key, required this.reminder});
+  const ReminderTile({
+    super.key,
+    required this.reminder,
+    required this.onEdit,
+    required this.onDelete,
+  });
 
   @override
   Widget build(BuildContext context) {
-    final formatted = DateFormat('dd/MM/yyyy HH:mm').format(reminder.dateTime);
-
-    return ListTile(
-      title: Text(reminder.title),
-      subtitle: Text(formatted),
-      leading: const Icon(Icons.alarm),
+    return Card(
+      margin: const EdgeInsets.symmetric(vertical: 6),
+      child: ListTile(
+        title: Text(reminder.title),
+        subtitle: Text(reminder.dateTime.toString()),
+        trailing: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            IconButton(
+              icon: const Icon(Icons.edit, color: Colors.blue),
+              onPressed: onEdit,
+            ),
+            IconButton(
+              icon: const Icon(Icons.delete, color: Colors.red),
+              onPressed: onDelete,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

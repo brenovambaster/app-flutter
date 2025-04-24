@@ -42,4 +42,16 @@ class ReminderController extends ChangeNotifier {
     final data = _reminders.map((r) => json.encode(r.toMap())).toList();
     await prefs.setStringList('reminders', data);
   }
+
+  Future<void> updateReminder(int index, Reminder updatedReminder) async {
+    _reminders[index] = updatedReminder;
+    await _saveReminders();
+    notifyListeners();
+  }
+
+  Future<void> deleteReminder(int index) async {
+    _reminders.removeAt(index);
+    await _saveReminders();
+    notifyListeners();
+  }
 }

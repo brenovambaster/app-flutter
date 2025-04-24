@@ -71,6 +71,55 @@ class _RemindersPageState extends State<RemindersPage> {
     _titleController.clear();
     setState(() => _selectedDateTime = null);
   }
+  void _editReminder(int index, Reminder reminder) {
+    _titleController.text = reminder.title;
+    _selectedDateTime = reminder.dateTime;
+
+    showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: const Text("Editar lembrete"),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            TextField(controller: _titleController),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: _pickDateTime,
+              child: const Text("Selecionar nova data/hora"),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text("Cancelar"),
+          ),
+          ElevatedButton(
+            onPressed: () async {
+              final updated = Reminder(
+                title: _titleController.text,
+                dateTime: _selectedDateTime ?? reminder.dateTime,
+              );
+              await Provider.of<ReminderController>(context, listen: false)
+                  .updateReminder(index, updated);
+              Navigator.pop(context);
+              showSuccessSnackBar(context, "Lembrete atualizado");
+              _titleController.clear();
+              _selectedDateTime = null;
+            },
+            child: const Text("Salvar"),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _deleteReminder(int index) async {
+    await Provider.of<ReminderController>(context, listen: false)
+        .deleteReminder(index);
+    showSuccessSnackBar(context, "Lembrete removido");
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -116,7 +165,11 @@ class _RemindersPageState extends State<RemindersPage> {
               child: ListView.builder(
                 itemCount: controller.reminders.length,
                 itemBuilder: (context, index) {
-                  return ReminderTile(reminder: controller.reminders[index]);
+                  return ReminderTile(
+                    reminder: controller.reminders[index],
+                    onEdit: () => _editReminder(index, controller.reminders[index]),
+                    onDelete: () => _deleteReminder(index),
+                  );
                 },
               ),
             ),
