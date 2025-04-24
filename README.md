@@ -20,6 +20,7 @@ dia, como contador, lembretes, gerenciamento de manutenção veicular e calculad
   * [📄 Licença](#-licença)
   * [🤝 Contribuição](#-contribuição)
   * [📞 Contato](#-contato)
+  * [Screenshots](#screenshots)
 <!-- TOC -->
 
 ## 🔍 Sobre o Projeto
@@ -134,3 +135,13 @@ Breno Vambáster
 GitHub: https://github.com/brenovambaster
 
 E-mail: brenovambaster5@gmail.com
+
+## Screenshots
+
+<img height="1200" src="flutter_01.png" title="Contador" width="540"/>
+
+<img height="1200" src="flutter_02.png" title="Lembretes" width="540"/>
+
+<img height="1200" src="flutter_03.png" title="Lembretes" width="540"/>
+
+<img height="1200" src="flutter_04.png" title="Menu" width="540"/>
