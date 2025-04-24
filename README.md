@@ -90,10 +90,9 @@ Para executar e desenvolver este projeto, você precisará:
    flutter pub get
    ```
 4. Verifique se tudo está configurado:
-
-  ```bash
-  flutter doctor  
-  ```
+   ```bash
+   flutter doctor  
+   ```
 
 ## ▶️ Como Rodar
 
