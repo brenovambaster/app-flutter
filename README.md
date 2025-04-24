@@ -20,7 +20,11 @@ dia, como contador, lembretes, gerenciamento de manutenção veicular e calculad
   * [📄 Licença](#-licença)
   * [🤝 Contribuição](#-contribuição)
   * [📞 Contato](#-contato)
-  * [Screenshots](#screenshots)
+* [Screenshots](#screenshots)
+  * [Tela de Contador](#tela-de-contador)
+  * [Tela de Lembretes](#tela-de-lembretes)
+  * [Tela de Combustível](#tela-de-combustível)
+  * [Tela de revisões veiculares](#tela-de-revisões-veiculares)
 <!-- TOC -->
 
 ## 🔍 Sobre o Projeto
@@ -43,10 +47,10 @@ implementadas:
   notificações.
 - [ ] **Gerenciador de Manutenção Veicular**: Ferramenta para acompanhamento de revisões e
   manutenções do veículo.
-- [ ] **Calculadora de Combustível**: Conversor para analisar a relação de preços entre gasolina e
+- [x] **Calculadora de Combustível**: Conversor para analisar a relação de preços entre gasolina e
   álcool.
 - [ ] **Interface Responsiva**: Layout adaptativo para diferentes tamanhos de tela.
-- [ ] **Armazenamento Local**: Persistência de dados para guardar informações mesmo quando o
+- [x] **Armazenamento Local**: Persistência de dados para guardar informações mesmo quando o
   aplicativo é fechado.
 
 ## 🛠️ Tecnologias Utilizadas
@@ -68,7 +72,7 @@ Para executar e desenvolver este projeto, você precisará:
 * Dispositivo físico ou emulador Android/iOS
 * Git para clonar o repositório
 
-> Recomendo fortementen usar o Android Studio com o plugin Flutter e dart. Isso ajudará na
+> Recomendo fortemente usar o Android Studio com o plugin Flutter e dart. Isso ajudará na
 > configuração do ambiente de desenvolvimento e execução
 
 ## ⬇️ Instalação
@@ -136,15 +140,32 @@ GitHub: https://github.com/brenovambaster
 
 E-mail: brenovambaster5@gmail.com
 
-## Screenshots
+# Screenshots
+
+## Tela de Contador
 
 <div>
-  <img height="600" src="docs/images/flutter_04.png" title="Menu" width="270" style="margin-right: 10px; border-radius: 8px;"/>
-  <img height="600" src="docs/images/flutter_01.png" title="Contador" width="270" style="border-radius: 8px;"/>
+  <img height="600" src="docs/images/menu.png" title="Menu" width="270" style="margin-right: 10px; border-radius: 8px;"/>
+  <img height="600" src="docs/images/tela_contador/flutter_01.png" title="Contador" width="270" style="border-radius: 8px;"/>
 </div>
+
+## Tela de Lembretes
+
 <div>
-  <img height="600" src="docs/images/flutter_02.png" title="Lembretes" width="270" style="margin-right: 10px; border-radius: 8px;"/>
-  <img height="600" src="docs/images/flutter_03.png" title="Lembretes" width="270" style="border-radius: 8px;"/>
-  <img height="600" src="docs/images/flutter_05.png" title="Lembretes" width="270" style="border-radius: 8px;"/>
+    <img height="600" src="docs/images/tela_lembrete/flutter_01.png" title="Lembretes" width="270" style="margin-right: 10px; border-radius: 8px;"/>
+    <img height="600" src="docs/images/tela_lembrete/flutter_02.png" title="Lembretes" width="270" style="margin-right: 10px; border-radius: 8px;"/>
+    <img height="600" src="docs/images/tela_lembrete/flutter_03.png" title="Lembretes" width="270" style="border-radius: 8px;"/>
+    <img height="600" src="docs/images/tela_lembrete/flutter_04.png" title="Lembretes" width="270" style="border-radius: 8px;"/>
 
 </div>
+
+## Tela de Combustível
+
+<div>
+    <img height="600" src="docs/images/tela_combustivel/flutter_01.png" title="Lembretes" width="270" style="border-radius: 8px;"/>
+    <img height="600" src="docs/images/tela_combustivel/flutter_02.png" title="Lembretes" width="270" style="border-radius: 8px;"/>
+    <img height="600" src="docs/images/tela_combustivel/flutter_03.png" title="Lembretes" width="270" style="border-radius: 8px;"/>
+</div>
+
+## Tela de revisões veiculares
+
