@@ -24,7 +24,46 @@ class FuelPage extends StatelessWidget {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 16),
-
+            Card(
+              color: Colors.blue.shade50,
+              elevation: 1,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(12),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Icon(Icons.info_outline, color: Colors.blue),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            "Entenda o cálculo",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blue,
+                              fontSize: 16,
+                            ),
+                          ),
+                          SizedBox(height: 4),
+                          Text(
+                            "Se o preço do álcool dividido pelo da gasolina for menor que 0.7, "
+                            "vale mais a pena abastecer com álcool, pois ele rende cerca de 70% "
+                            "do que rende a gasolina.",
+                            style: TextStyle(fontSize: 14),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 16),
             TextField(
               controller: controller.alcoholController,
               keyboardType: TextInputType.number,
@@ -80,6 +119,9 @@ class FuelPage extends StatelessWidget {
                       const SizedBox(height: 8),
                       Text("Álcool: R\$${controller.result!.alcoholPrice}"),
                       Text("Gasolina: R\$${controller.result!.gasolinePrice}"),
+                      Text(
+                        "Razão: ${controller.result!.ratio.toStringAsFixed(2)}",
+                      ),
                     ],
                   ),
                 ),
