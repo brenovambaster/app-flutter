@@ -29,6 +29,7 @@ class FuelController extends ChangeNotifier {
       alcoholPrice: alcohol,
       gasolinePrice: gasoline,
       recommendation: recommendation,
+      ratio: ratio,
     );
 
     notifyListeners();
