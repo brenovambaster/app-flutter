@@ -43,7 +43,7 @@ Este projeto está em desenvolvimento ativo. Abaixo estão as funcionalidades qu
 implementadas:
 
 - [x] **Contador Interativo**: Implementação básica demonstrando gerenciamento de estado no Flutter.
-- [ ] **Sistema de Lembretes**: Funcionalidade para criar, editar e gerenciar lembretes com
+- [x] **Sistema de Lembretes**: Funcionalidade para criar, editar e gerenciar lembretes com
   notificações.
 - [ ] **Gerenciador de Manutenção Veicular**: Ferramenta para acompanhamento de revisões e
   manutenções do veículo.
