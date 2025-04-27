@@ -1,13 +1,17 @@
 import 'package:app1/home_page.dart';
+
 import 'package:app1/providers/app_providers.dart';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import 'package:timezone/data/latest_all.dart' as tz;
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   tz.initializeTimeZones();
-  runApp(MultiProvider(providers: appProviders, child: const MyApp()));
+
+  runApp(MultiProvider(providers: appProviders, child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {

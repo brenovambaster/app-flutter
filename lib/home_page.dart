@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'pages/reminders_page.dart';
 import 'pages/fuel_page.dart';
 import 'pages/counter_page.dart';
+import 'widgets/custom_drawer.dart'; // Importando o Drawer personalizado
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
