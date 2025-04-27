@@ -1,44 +1,50 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    // O Flutter Gradle Plugin deve ser aplicado após os plugins do Android e Kotlin.
     id("dev.flutter.flutter-gradle-plugin")
 }
 
 android {
     namespace = "com.example.app1"
     compileSdk = flutter.compileSdkVersion
-    //ndkVersion = flutter.ndkVersion
-    ndkVersion = "27.0.12077973"
+    ndkVersion = "27.0.12077973" // Especifica a versão do NDK
+
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        isCoreLibraryDesugaringEnabled = true
+        sourceCompatibility = JavaVersion.VERSION_17 // Configurado para Java 17
+        targetCompatibility = JavaVersion.VERSION_17 // Configurado para Java 17
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
+        jvmTarget = JavaVersion.VERSION_17.toString() // Configura o Kotlin para usar Java 17
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.app1"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        multiDexEnabled = true
+        applicationId = "com.example.app1" // Identificador único para o aplicativo
+        minSdk = flutter.minSdkVersion // Versão mínima do SDK
+        targetSdk = flutter.targetSdkVersion // Versão alvo do SDK
+        versionCode = flutter.versionCode // Código da versão
+        versionName = flutter.versionName // Nome da versão
     }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName("debug") // Configuração de assinatura
         }
+    }
+
+    lint {
+        checkReleaseBuilds = false // Desabilitar checagem de builds de release
     }
 }
 
+dependencies {
+    // Atualizando para a versão 2.1.4 conforme requerido pelo flutter_local_notifications
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
+}
+
 flutter {
-    source = "../.."
+    source = "../.." // Diretório do código-fonte do Flutter
 }

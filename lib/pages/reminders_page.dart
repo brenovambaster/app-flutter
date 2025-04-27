@@ -61,63 +61,76 @@ class _RemindersPageState extends State<RemindersPage> {
 
     final reminder = Reminder(title: title, dateTime: dateTime);
 
+    // Primeiro limpa o campo de texto
+    _titleController.clear();
+
+    // Depois reseta o DateTime via setState
+    setState(() {
+      _selectedDateTime = null;
+    });
+
+    // Salva o lembrete
     await Provider.of<ReminderController>(
       context,
       listen: false,
     ).addReminder(reminder);
 
+    // Mostra feedback ao usuário
     showSuccessSnackBar(context, 'Lembrete salvo com sucesso!');
-
-    _titleController.clear();
-    setState(() => _selectedDateTime = null);
   }
+
   void _editReminder(int index, Reminder reminder) {
     _titleController.text = reminder.title;
     _selectedDateTime = reminder.dateTime;
 
     showDialog(
       context: context,
-      builder: (_) => AlertDialog(
-        title: const Text("Editar lembrete"),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            TextField(controller: _titleController),
-            const SizedBox(height: 10),
-            ElevatedButton(
-              onPressed: _pickDateTime,
-              child: const Text("Selecionar nova data/hora"),
+      builder:
+          (_) => AlertDialog(
+            title: const Text("Editar lembrete"),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                TextField(controller: _titleController),
+                const SizedBox(height: 10),
+                ElevatedButton(
+                  onPressed: _pickDateTime,
+                  child: const Text("Selecionar nova data/hora"),
+                ),
+              ],
             ),
-          ],
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text("Cancelar"),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text("Cancelar"),
+              ),
+              ElevatedButton(
+                onPressed: () async {
+                  final updated = Reminder(
+                    title: _titleController.text,
+                    dateTime: _selectedDateTime ?? reminder.dateTime,
+                  );
+                  await Provider.of<ReminderController>(
+                    context,
+                    listen: false,
+                  ).updateReminder(index, updated);
+                  Navigator.pop(context);
+                  showSuccessSnackBar(context, "Lembrete atualizado");
+                  _titleController.clear();
+                  _selectedDateTime = null;
+                },
+                child: const Text("Salvar"),
+              ),
+            ],
           ),
-          ElevatedButton(
-            onPressed: () async {
-              final updated = Reminder(
-                title: _titleController.text,
-                dateTime: _selectedDateTime ?? reminder.dateTime,
-              );
-              await Provider.of<ReminderController>(context, listen: false)
-                  .updateReminder(index, updated);
-              Navigator.pop(context);
-              showSuccessSnackBar(context, "Lembrete atualizado");
-              _titleController.clear();
-              _selectedDateTime = null;
-            },
-            child: const Text("Salvar"),
-          ),
-        ],
-      ),
     );
   }
 
   void _deleteReminder(int index) async {
-    await Provider.of<ReminderController>(context, listen: false)
-        .deleteReminder(index);
+    await Provider.of<ReminderController>(
+      context,
+      listen: false,
+    ).deleteReminder(index);
     showSuccessSnackBar(context, "Lembrete removido");
   }
 
@@ -167,7 +180,8 @@ class _RemindersPageState extends State<RemindersPage> {
                 itemBuilder: (context, index) {
                   return ReminderTile(
                     reminder: controller.reminders[index],
-                    onEdit: () => _editReminder(index, controller.reminders[index]),
+                    onEdit:
+                        () => _editReminder(index, controller.reminders[index]),
                     onDelete: () => _deleteReminder(index),
                   );
                 },
