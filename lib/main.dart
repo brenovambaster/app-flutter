@@ -4,8 +4,11 @@ import 'package:app1/controllers/reminder_controller.dart';
 import 'package:app1/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:timezone/data/latest_all.dart' as tz;
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  tz.initializeTimeZones();
   runApp(
     MultiProvider(
       providers: [

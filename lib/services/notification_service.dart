@@ -1,3 +1,4 @@
+import 'package:app1/helpers/id_generator.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/timezone.dart' as tz;
 import 'package:app1/models/reminder_model.dart';
@@ -16,6 +17,10 @@ class NotificationService {
         InitializationSettings(android: initializationSettingsAndroid);
 
     await flutterLocalNotificationsPlugin.initialize(initializationSettings);
+
+    tz.setLocalLocation(
+      tz.getLocation('America/Sao_Paulo'),
+    );
   }
 
   Future<void> scheduleNotification(Reminder reminder) async {
@@ -30,7 +35,7 @@ class NotificationService {
     final platformDetails = NotificationDetails(android: androidDetails);
 
     await flutterLocalNotificationsPlugin.zonedSchedule(
-      0, // ID da notificação
+      generateShortId(),
       reminder.title, // Título da notificação
       "Hora de fazer a tarefa", // Descrição da notificação
       tz.TZDateTime.from(reminder.dateTime, tz.local),
