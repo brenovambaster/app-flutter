@@ -4,6 +4,7 @@ import '../models/fuel_result_model.dart';
 class FuelController extends ChangeNotifier {
   final alcoholController = TextEditingController();
   final gasolineController = TextEditingController();
+  static const double _RECOMMENDED_RATIO = 0.7;
 
   FuelResult? _result;
 
@@ -23,7 +24,9 @@ class FuelController extends ChangeNotifier {
 
     final ratio = alcohol / gasoline;
     final recommendation =
-        ratio >= 0.7 ? 'Gasolina é mais vantajoso' : 'Álcool é mais vantajoso';
+        ratio >= _RECOMMENDED_RATIO
+            ? 'Gasolina é mais vantajoso'
+            : 'Álcool é mais vantajoso';
 
     _result = FuelResult(
       alcoholPrice: alcohol,
