@@ -49,7 +49,7 @@ implementadas:
   manutenções do veículo.
 - [x] **Calculadora de Combustível**: Conversor para analisar a relação de preços entre gasolina e
   álcool.
-- [ ] **Interface Responsiva**: Layout adaptativo para diferentes tamanhos de tela.
+- [x] **Interface Responsiva**: Layout adaptativo para diferentes tamanhos de tela.
 - [x] **Armazenamento Local**: Persistência de dados para guardar informações mesmo quando o
   aplicativo é fechado.
 
