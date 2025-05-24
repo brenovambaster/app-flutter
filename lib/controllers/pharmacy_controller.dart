@@ -11,7 +11,6 @@ class PharmacyController with ChangeNotifier {
   final FilterProductsUseCase _filterProductsUseCase;
   final GetCategoriesUseCase _getCategoriesUseCase;
 
-  // Construtor recebendo as dependências
   PharmacyController({
     required ProductRepository productRepository,
     required FilterProductsUseCase filterProductsUseCase,
@@ -20,7 +19,6 @@ class PharmacyController with ChangeNotifier {
        _filterProductsUseCase = filterProductsUseCase,
        _getCategoriesUseCase = getCategoriesUseCase;
 
-  // === ESTADO PRIVADO ===
   List<Product> _products = [];
   List<Product> _filteredProducts = [];
   List<String> _categories = [];
@@ -48,12 +46,11 @@ class PharmacyController with ChangeNotifier {
 
   String? get errorMessage => _errorMessage;
 
-  // === MÉTODO DE INICIALIZAÇÃO ===
   Future<void> initialize() async {
     await _loadProducts();
   }
 
-  // === MÉTODOS PÚBLICOS ===
+
   Future<void> _loadProducts() async {
     try {
       _setLoading(true);
