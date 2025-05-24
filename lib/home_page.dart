@@ -3,6 +3,7 @@ import 'pages/reminders_page.dart';
 import 'pages/fuel_page.dart';
 import 'pages/counter_page.dart';
 import 'widgets/custom_drawer.dart'; // Importando o Drawer personalizado
+import 'pages/pharmacy_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -18,6 +19,7 @@ class _HomePageState extends State<HomePage> {
     const CounterPage(title: 'Contador'),
     const RemindersPage(title: 'Lembretes'),
     const FuelPage(title: "Combustível"),
+    const PharmacyPage(),
     const Center(child: Text('Revisões')),
     const Center(child: Text('Configurações')),
   ];

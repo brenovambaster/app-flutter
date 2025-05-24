@@ -43,11 +43,19 @@ class CustomDrawer extends StatelessWidget {
             },
           ),
           ListTile(
+            leading: Icon(Icons.local_pharmacy),
+            title: Text('Farmácia'),
+            onTap: () {
+              Navigator.pop(context);
+              onTap(3);
+            },
+          ),
+          ListTile(
             leading: const Icon(Icons.motorcycle),
             title: const Text('Revisões'),
             onTap: () {
               Navigator.pop(context);
-              onTap(3);
+              onTap(4);
             },
           ),
           ListTile(
@@ -55,7 +63,7 @@ class CustomDrawer extends StatelessWidget {
             title: const Text('Configurações'),
             onTap: () {
               Navigator.pop(context);
-              onTap(4);
+              onTap(5);
             },
           ),
         ],
