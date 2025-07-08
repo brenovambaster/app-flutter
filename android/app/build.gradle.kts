@@ -8,7 +8,7 @@ plugins {
 android {
     namespace = "com.example.app1"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = "27.0.12077973" // Especifica a versão do NDK
+    ndkVersion = "27.2.12479018" // Especifica a versão do NDK
 
     compileOptions {
         isCoreLibraryDesugaringEnabled = true

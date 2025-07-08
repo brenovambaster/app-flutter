@@ -97,7 +97,6 @@ class PharmacyController with ChangeNotifier {
     await _loadProducts();
   }
 
-  // === MÉTODOS PRIVADOS ===
   void _applyFilters() {
     _filteredProducts = _filterProductsUseCase.execute(
       _products,
